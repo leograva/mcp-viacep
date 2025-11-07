@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mcp-viacep"
+version = "0.1.0"
+description = "Servidor MCP para consulta de CEPs via ViaCEP"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "mcp_viacep"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastmcp = "^2.12.4"
+requests = "^2.31.0"
+
+[tool.poetry.scripts]
+mcp-viacep = "mcp_viacep.server:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
